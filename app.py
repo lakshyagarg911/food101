@@ -20,7 +20,7 @@ def predict(image_file, model):
   confidence = np.max(prediction) * 100
   return (confidence, predicted_class)
 
-saved_model = keras.models.load_model("final_project/trained_model.keras")
+saved_model = keras.models.load_model("./final_project/trained_model.keras")
 
 st.title('Upload an Indian food image')
 uploaded_image = st.file_uploader("Choose an image...", type=["jpg", "jpeg", "png"])
